@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>System For Administrator</title>
+</head>
+
+<body>
+	<div align="center" class="dropdown">
+		<div>
+			<h3>System For Administrator</h3>
+
+			<button class="dropbtn">Dropdown</button>
+			<div class="dropdown-content">
+				<a href="#">Link 1</a> <a href="#">Link 2</a> <a href="#">Link 3</a>
+			</div>
+		</div>
+		<div id="System For Administrator" class="tabcontent">
+			<table border="1" cellpadding="10">
+				<thead>
+					<tr>
+						<th>Event Name</th>
+						<th>Scanned Date</th>
+						<th>Scanned Time</th>
+						<th>First Name</th>
+						<th>Middle Initial</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th>Email2</th>
+						<th>Company</th>
+						<th>Job Title</th>
+						<th>Address1</th>
+						<th>Address2</th>
+						<th>Address3</th>
+						<th>City</th>
+						<th>State Id</th>
+						<th>Zip</th>
+						<th>Country Id</th>
+						<th>Phone Number</th>
+						<th>Phone Number 2</th>
+						<th>Fax Number</th>
+						<th>Questions</th>
+						<th>Response</th>
+						<th>Note</th>
+						<th>Collateral</th>
+						<th>Qualified/Disqualified</th>
+						<th>Scanned By</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="person : ${personList}">
+						<td th:text="${person.eventName}">Event Name</td>
+						<td th:text="${person.scannedDate}">Scanned Date</td>
+						<td th:text="${person.scannedTime}">Scanned Time</td>
+						<td th:text="${person.firstName}">First Name</td>
+						<td th:text="${person.middleInitial}">Middle Initial</td>
+						<td th:text="${person.lastName}">Last Name</td>
+						<td th:text="${person.email}">Email</td>
+						<td th:text="${person.email2}">Email2</td>
+						<td th:text="${person.company}">Company</td>
+						<td th:text="${person.jobTitle}">Job Title</td>
+						<td th:text="${person.address1}">Address1</td>
+						<td th:text="${person.address2}">Address2</td>
+						<td th:text="${person.address3}">Address3</td>
+						<td th:text="${person.city}">City</td>
+						<td th:text="${person.stateId}">State Id</td>
+						<td th:text="${person.zip}">Zip</td>
+						<td th:text="${person.countryId}">Country Id</td>
+						<td th:text="${person.phoneNumber}">Phone Number</td>
+						<td th:text="${person.phoneNumber2}">Phone Number 2</td>
+						<td th:text="${person.faxNumber}">Fax Number</td>
+						<td th:text="${person.questions}">Questions</td>
+						<td th:text="${person.response}">Response</td>
+						<td th:text="${person.note}">Note</td>
+						<td th:text="${person.collateral}">Collateral</td>
+						<td th:text="${person.qualifiedOrDisqualified}">Qualified/Disqualified</td>
+						<td th:text="${person.scannedBy}">Scanned By</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div id="Filter" class="tabcontent">
+
+			<table border="1" cellpadding="10">
+				<thead>
+					<tr>
+						<th>Event Name</th>
+						<th>Scanned Date</th>
+						<th>Scanned Time</th>
+						<th>First Name</th>
+						<th>Middle Initial</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th>Email2</th>
+						<th>Company</th>
+						<th>Job Title</th>
+						<th>Address1</th>
+						<th>Address2</th>
+						<th>Address3</th>
+						<th>City</th>
+						<th>State Id</th>
+						<th>Zip</th>
+						<th>Country Id</th>
+						<th>Phone Number</th>
+						<th>Phone Number 2</th>
+						<th>Fax Number</th>
+						<th>Questions</th>
+						<th>Response</th>
+						<th>Note</th>
+						<th>Collateral</th>
+						<th>Qualified/Disqualified</th>
+						<th>Scanned By</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="person : ${personList}">
+						<td th:text="${person.eventName}">Event Name</td>
+						<td th:text="${person.scannedDate}">Scanned Date</td>
+						<td th:text="${person.scannedTime}">Scanned Time</td>
+						<td th:text="${person.firstName}">First Name</td>
+						<td th:text="${person.middleInitial}">Middle Initial</td>
+						<td th:text="${person.lastName}">Last Name</td>
+						<td th:text="${person.email}">Email</td>
+						<td th:text="${person.email2}">Email2</td>
+						<td th:text="${person.company}">Company</td>
+						<td th:text="${person.jobTitle}">Job Title</td>
+						<td th:text="${person.address1}">Address1</td>
+						<td th:text="${person.address2}">Address2</td>
+						<td th:text="${person.address3}">Address3</td>
+						<td th:text="${person.city}">City</td>
+						<td th:text="${person.stateId}">State Id</td>
+						<td th:text="${person.zip}">Zip</td>
+						<td th:text="${person.countryId}">Country Id</td>
+						<td th:text="${person.phoneNumber}">Phone Number</td>
+						<td th:text="${person.phoneNumber2}">Phone Number 2</td>
+						<td th:text="${person.faxNumber}">Fax Number</td>
+						<td th:text="${person.questions}">Questions</td>
+						<td th:text="${person.response}">Response</td>
+						<td th:text="${person.note}">Note</td>
+						<td th:text="${person.collateral}">Collateral</td>
+						<td th:text="${person.qualifiedOrDisqualified}">Qualified/Disqualified</td>
+						<td th:text="${person.scannedBy}">Scanned By</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+
+	</div>
+
+	<script type="text/javascript">
+		function openCity(evt, cityName) {
+			// Declare all variables
+			var i, tabcontent, tablinks;
+
+			// Get all elements with class="tabcontent" and hide them
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+
+			// Get all elements with class="tablinks" and remove the class "active"
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(
+						" active", "");
+			}
+
+			// Show the current tab, and add an "active" class to the button that opened the tab
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
+</body>
+
+</html>

@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity(name = "Person")
+@Entity
 @Table(name = "persons")
 public class Person {
 
@@ -67,10 +67,10 @@ public class Person {
 	private String countryId;
 
 	@Column(name = "phone_number")
-	private int phoneNumber;
+	private String phoneNumber;
 
 	@Column(name = "phone_number2")
-	private int phoneNumber2;
+	private String phoneNumber2;
 
 	@Column(name = "fax_number")
 	private String faxNumber;
@@ -229,19 +229,19 @@ public class Person {
 		this.countryId = countryId;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public int getPhoneNumber2() {
+	public String getPhoneNumber2() {
 		return phoneNumber2;
 	}
 
-	public void setPhoneNumber2(int phoneNumber2) {
+	public void setPhoneNumber2(String phoneNumber2) {
 		this.phoneNumber2 = phoneNumber2;
 	}
 

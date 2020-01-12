@@ -14,7 +14,6 @@ public class HelloWorld {
 	@GetMapping(value = "/")
 	public String index(Model model) {
 		model.addAttribute("personList", personDao.getAll());
-		System.out.println("personDao.getAll()......." + personDao.getAll());
 		return "index";
 	}
 
